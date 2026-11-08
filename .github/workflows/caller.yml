@@ -1,0 +1,12 @@
+name: Demo caller
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  c:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    uses: PDFtoMark/gab-poc-callee-demo/.github/workflows/reusable.yml@main
